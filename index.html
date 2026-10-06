@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargo AI</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #07111f;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    header {
+      padding: 14px;
+      font-size: 25px;
+      font-weight: bold;
+      background: #0d1b2a;
+    }
+
+    .ai {
+      color: #35d07f;
+    }
+
+    #cameraBox {
+      position: relative;
+      width: 100%;
+      background: black;
+      min-height: 320px;
+    }
+
+    video {
+      width: 100%;
+      min-height: 320px;
+      object-fit: cover;
+    }
+
+    #status {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0,0,0,.7);
+      padding: 8px 12px;
+      border-radius: 10px;
+      color: #35d07f;
+      font-weight: bold;
+    }
+
+    .panel {
+      padding: 15px;
+    }
+
+    .speed {
+      font-size: 55px;
+      font-weight: bold;
+    }
+
+    .kmh {
+      font-size: 18px;
+      color: #aaa;
+    }
+
+    #message {
+      margin: 15px 0;
+      padding: 15px;
+      min-height: 55px;
+      background: #132238;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+
+    button {
+      width: 90%;
+      max-width: 500px;
+      padding: 17px;
+      margin: 7px;
+      border: 0;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #start {
+      background: #35d07f;
+      color: #04110a;
+    }
+
+    #voice {
+      background: #1677ff;
+      color: white;
+    }
+
+    #location {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+🚛 CARGO <span class="ai">AI</span>
+</header>
+
+<div id="cameraBox">
+
+  <video id="camera" autoplay playsinline muted></video>
+
+  <div id="status">
+    ● AI ГОТОВ
+  </div>
+
+</div>
+
+<div class="panel">
+
+  <div class="speed" id="speed">0</div>
+  <div class="kmh">km/h</div>
+
+  <di
